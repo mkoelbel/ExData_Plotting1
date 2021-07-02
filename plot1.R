@@ -1,7 +1,11 @@
 
 library(lubridate)
 
-# read in relevant data
+# download and read in relevant data
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip",
+              "household_power_consumption.zip")
+unzip("household_power_consumption.zip")
+
 data_w_names <- read.table("household_power_consumption.txt",
                            header = T,
                            sep = ";",
